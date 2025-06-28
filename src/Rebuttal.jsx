@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./index.css";
 import "./Rebuttal.css";
+import ReactMarkDown from 'react-markdown'
 
 const RebuttalPage = () => {
   const [reason, setReason] = useState("");
@@ -23,7 +24,7 @@ const RebuttalPage = () => {
      setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/rebuttal", form);
+      const res = await axios.post("https://clearclaim-backend.onrender.com/rebuttal", form);
       console.log("✅ Rebuttal response:", res.data);
       setRebuttal(res.data.rebuttal || "No rebuttal generated.");
       setClauses(res.data.matched_clauses || []);
@@ -60,7 +61,7 @@ const RebuttalPage = () => {
       {rebuttal && (
         <div className="result-box">
           <h3>🔍 Suggested Rebuttal</h3>
-          <p>{rebuttal}</p>
+          <ReactMarkDown>{rebuttal}</ReactMarkDown>
 
           {clauses.length > 0 && (
             <>

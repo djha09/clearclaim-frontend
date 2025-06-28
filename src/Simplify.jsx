@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ReactMarkDown from 'react-markdown'
+import './simplify.css'
+import './index.css'
 
 const SimplifyPage = () => {
   const [file, setFile] = useState(null);
@@ -21,7 +24,7 @@ const SimplifyPage = () => {
     setResult(null);
 
     try {
-      const response = await axios.post("http://localhost:5000/simplify_pdf", formData, {
+      const response = await axios.post("https://clearclaim-backend.onrender.com/simplify_pdf", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -57,7 +60,7 @@ const SimplifyPage = () => {
       {result && (
         <div style={styles.resultBox}>
           <h3 style={styles.resultTitle}>📝 Simplified Summary:</h3>
-          <pre style={styles.resultText}>{result}</pre>
+          <ReactMarkDown style={styles.resultText}>{result}</ReactMarkDown>
         </div>
       )}
     </div>

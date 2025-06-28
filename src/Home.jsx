@@ -1,32 +1,50 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./index.css";
+import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="page-container">
-      <h1>Welcome to ClearClaim 🚀</h1>
-      <p>Empowering you to simplify your policy, fight claim denials, and get insurance help instantly.</p>
-
-      <div className="card-grid">
-        <div className="card">
-          <h3>Simplify Your Claim</h3>
-          <p>Check what your Claim covers and be Future proof.</p>
-          <Link to="/simplify"><button>Try Now</button></Link>
-        </div>
-
-        <div className="card">
-          <h3>✍️ Generate Rebuttal</h3>
-          <p>Upload a rejection letter or type your reason to get a strong rebuttal.</p>
-          <Link to="/rebuttal"><button>Start Rebuttal</button></Link>
-        </div>
-
-        {/* <div className="card">
-          <h3>🤖 Insurance Chatbot</h3>
-          <p>Ask questions about your insurance plan or upload your PDF to get answers.</p>
-          <Link to="/chatbot"><button>Ask Now</button></Link>
+    <div className="homepage">
+      <header className="hero">
+        <h1>🛡️ ClearClaim</h1>
+        {/* <p>Master Your Policy, Verify Every Detail, Dispute with Confidence, and Get Help in an Instant!</p> */}
+        {/* <div className="hero-buttons">
+          <a href="/simplify" className="btn">Simplify Policy</a>
+          <a href="/rebuttal" className="btn">Generate Rebuttal</a>
+          <a href="/verify" className="btn">Verify Your Claim</a>
         </div> */}
-      </div>
+      </header>
+
+          <section className="about">
+        <p className="about-text">
+          Master Your Policy, Verify Every Detail, Dispute with Confidence, and Get Help in an Instant!
+        </p>
+      </section>
+      
+      <section className="features">
+        <h2>📌 Our Core Features</h2>
+        <div className="feature-cards">
+          <div className="card">
+            <h3>📄 Simplify Insurance</h3>
+            <p>Upload your insurance policy PDF and get an easy-to-read summary in seconds.</p>
+            <a href="/simplify" className="card-btn">Simplify →</a>
+          </div>
+          <div className="card">
+            <h3>✉️ Rebuttal Generator</h3>
+            <p>Denied a claim? Upload your rejection letter and let AI draft a strong rebuttal.</p>
+            <a href="/rebuttal" className="card-btn">Generate →</a>
+          </div>
+          <div className="card">
+            <h3>✉️ Claim Verifying</h3>
+            <p>Unsure about the agent’s explanation? Verify the details and ensure everything adds up</p>
+            <a href="/verify" className="card-btn">Verify →</a>
+          </div>
+          
+        </div>
+      </section>
+
+      <footer className="footer">
+        <p>&copy; 2025 ClearClaim. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };
