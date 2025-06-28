@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.10.0",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
@@ -46,7 +47,7 @@
     "@tailwindcss/postcss": "^4.1.11",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11",
-    "react-scripts": "^4.0.0"  
+    "react-scripts": "^4.0.0",
+    "tailwindcss": "^4.1.11"
   }
 }
