@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.page-container {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+textarea, input, select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1e40af;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.result-box {
+  background: #e0f2fe;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #f9fafb;
+  padding: 15px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.chat-entry {
+  margin-bottom: 15px;
+}
+
+.chat-user {
+  color: #1e3a8a;
+}
+
+.chat-bot {
+  color: #065f46;
+}
+.card-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 20px;
+}
+
+.card {
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }

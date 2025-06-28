@@ -1,0 +1,46 @@
+/* src/RebuttalPage.css */
+.rebuttal-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.rebuttal-container h2 {
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.rebuttal-result {
+  margin-top: 2rem;
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.rebuttal-result h3 {
+  margin-top: 1rem;
+  color: #334155;
+}
+
+.error-text {
+  color: red;
+  margin-top: 1rem;
+}
