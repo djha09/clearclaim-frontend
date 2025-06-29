@@ -42,82 +42,32 @@ const SimplifyPage = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.title}>Simplify Your Insurance Policy</h2>
+    <div className="simplify-container">
+      <h2 >Simplify Your Insurance Policy</h2>
 
       <input
         type="file"
         accept="application/pdf"
         onChange={(e) => setFile(e.target.files[0])}
-        style={styles.input}
+        
       />
-      <button onClick={handleUpload} disabled={loading} style={styles.button}>
+      <button onClick={handleUpload} disabled={loading}>
         {loading ? "Simplifying..." : "Upload & Simplify"}
       </button>
 
-      {error && <p style={styles.error}>{error}</p>}
+      {error && <p className="error">{error}</p>}
 
       {result && (
-        <div style={styles.resultBox}>
-          <h3 style={styles.resultTitle}>📝 Simplified Summary:</h3>
-          <ReactMarkDown style={styles.resultText}>{result}</ReactMarkDown>
+        <div className=".result-area">
+          <h3 className="resultTitle">📝 Simplified Summary:</h3>
+          <ReactMarkDown className="resultText">{result}</ReactMarkDown>
         </div>
       )}
+
+
+      <a className="back" href="/">BACK TO HOME</a>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    maxWidth: "800px",
-    margin: "50px auto",
-    padding: "20px",
-    fontFamily: "sans-serif",
-    border: "1px solid #ddd",
-    borderRadius: "10px",
-    boxShadow: "0 0 10px rgba(0,0,0,0.05)",
-    backgroundColor: "#fff",
-  },
-  title: {
-    fontSize: "26px",
-    marginBottom: "20px",
-    color: "#333",
-    textAlign: "center",
-  },
-  input: {
-    display: "block",
-    marginBottom: "15px",
-    fontSize: "16px",
-  },
-  button: {
-    padding: "10px 20px",
-    backgroundColor: "#007bff",
-    color: "white",
-    border: "none",
-    fontSize: "16px",
-    borderRadius: "5px",
-    cursor: "pointer",
-  },
-  error: {
-    color: "red",
-    marginTop: "10px",
-  },
-  resultBox: {
-    marginTop: "30px",
-    padding: "20px",
-    backgroundColor: "#f8f9fa",
-    borderRadius: "10px",
-  },
-  resultTitle: {
-    marginBottom: "10px",
-    fontWeight: "bold",
-    fontSize: "18px",
-  },
-  resultText: {
-    whiteSpace: "pre-wrap",
-    fontSize: "16px",
-    color: "#444",
-  },
 };
 
 export default SimplifyPage;
