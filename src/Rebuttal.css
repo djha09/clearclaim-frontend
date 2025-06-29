@@ -74,3 +74,23 @@ button:hover {
   text-align: center;
   font-weight: 500;
 }
+.back {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+ background-color: #0077cc;
+ font-family: Arial;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back:hover {
+  background-color: #1e40af;
+  /* transform: translateY(-2px); */
+}
