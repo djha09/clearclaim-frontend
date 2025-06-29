@@ -65,7 +65,7 @@ const SimplifyPage = () => {
       )}
 
 
-      <a className="back" href="/">BACK TO HOME</a>
+      
     </div>
   );
 };
