@@ -75,7 +75,7 @@ const RebuttalPage = () => {
           )}
         </div>
       )}
-      <a className="back" href="/">BACK TO HOME</a>
+      
     </div>
 
 
