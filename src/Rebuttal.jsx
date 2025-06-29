@@ -33,7 +33,7 @@ const RebuttalPage = () => {
       console.error("❌ Backend error:", err);
       setError("Error generating rebuttal. Please try again.");
     }finally {
-    setLoading(false); // ✅ Add this line
+    setLoading(false); 
   }
   };
 
